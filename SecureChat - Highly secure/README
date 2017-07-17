@@ -1,0 +1,44 @@
+Please find the user credentials that have been already registered below:
+***************************
+anpspk      ilovenetsec
+joyesh      ilovenetsectoo
+a           a
+b           b
+c           c
+rama        friyay
+shailesh    gymtime
+***************************
+
+This applicaton requires crytpo library which could be installed by invoking command.
+	pip install cryptography
+
+To create new credentials,
+i) Users can run password_generator.py by invoking command
+            python password_generator.py
+ii) Enter desired credentials
+
+All the constants/public keys that are used at the server and client side for various protocols
+are stored in their respective config files. (Server - server.cfg, Client - client.cfg)
+
+The server has its own public and private keys which reside in the 'keys' folder. Both of these are
+of the .der format, the only format supported by our chat application. These keys are of the 4096 bits.
+
+Updating configuration related to the Client and Server:
+i) Make sure no clients or server are running at this point of time
+ii) Open and update config_generator.py with desired initial values
+iii) Run config_generator.py to generate required config files(client.cfg and server.cfg)
+iv) Follow the below steps to run the client and server
+
+Steps to run Server and Client:
+i) Ensure that you are within the project directory - SecureChat
+ii) First, run the server by invoking command
+            python server.py
+iii) Type in START at the prompt to get the server up and running
+iv) Next, run the client by invoking command
+            python client.py
+v) When the prompt is displayed, enter one of the credentials listed above
+    or the one that you had created by yourself.
+vi) SecureChat supports the following features:
+    list - prints out all the users that are currently online
+    send USER MESSAGE - sends out a message to the specified user
+    logout - user signs out from the secure chat application
